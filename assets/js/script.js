@@ -202,6 +202,6 @@ function writePassword() {
   passwordText.value = passwordLength;
 }
 
-// Add event listener to generate button on click
+// Event listener to generate button on click
 generateBtn.addEventListener("click", writePassword);
 
