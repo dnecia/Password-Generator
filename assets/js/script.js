@@ -1,4 +1,4 @@
-// Assignment Code
+// Assignment Codes
 var generateBtn = document.querySelector("#generate");
 var specialCharacters = [
   "~",
@@ -100,45 +100,45 @@ var uppercaseCheck;
 
 function determineLength() {
   passwordLength = prompt(
-    "How many characters would you like your password to contain?"
+    "How many characters would you like to contain in your password?"
   );
   if (passwordLength < 8) {
-    alert("Password length must be at least 8 characters.");
+    alert("Password must be at least 8 characters and no more than 129 characters.");
     determineLength();
   } else if (passwordLength > 129) {
-    alert("Password length must be less than 129 characters.");
+    alert("Password must be less than 129 characters.");
     determineLength();
   } else if (isNaN(passwordLength)) {
     alert("Password length must be a number.");
     determineLength();
   } else {
     alert(
-      "Next, we will determine what types of characters you want to use in your Generated Password."
+      "Choose what types of characters would you like to use in your Generated Password."
     );
   }
   return passwordLength;
 }
 
 function determineSpecial() {
-  specialCheck = confirm("Click OK to comfirm including special characters.");
+  specialCheck = confirm("Click OK to comfirm inclusion of special characters.");
   return specialCheck;
 }
 
 function determineNumber() {
-  numberCheck = confirm("Click OK to comfirm including number characters.");
+  numberCheck = confirm("Click OK to comfirm inclusion of number characters.");
   return numberCheck;
 }
 
 function determinelowercase() {
   lowercaseCheck = confirm(
-    "Click OK to comfirm including lowercase characters."
+    "Click OK to comfirm inclusion of lowercase characters."
   );
   return lowercaseCheck;
 }
 
 function determineuppercase() {
   uppercaseCheck = confirm(
-    "Click OK to comfirm including uppercase characters."
+    "Click OK to comfirm inclusion of uppercase characters."
   );
   return uppercaseCheck;
 }
